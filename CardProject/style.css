@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card-container {
+    display: flex;
+    gap: 25px;
+    padding: 30px;
+
+}
+
+.card {
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* shadow */
+    border-radius: 10px;
+    max-width: 275px;
+    background: white;
+}
+
+/* 
+
+Description:
+This CSS rule applies a hover effect to elements with the class "card". 
+When a user hovers over a card, it scales up to 105% of its original size, 
+creating a subtle zoom-in effect to enhance user interaction.
+*/
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    max-height: 50%;
+}
+
+.card-details {
+    padding: 20px;
+}
+
+.card h3 {
+    font-size: 1.25rem;
+    color: #333;
+}
