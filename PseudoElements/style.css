@@ -1,0 +1,53 @@
+:root {
+    --pseudo-element-border-radius: 5px; /*defined a new css variable*/
+}
+
+.note {
+    position: relative;
+    padding: 20px;
+    background: #fefccf;
+    border: 1px solid #ddd;
+
+}
+
+.note::before {
+    position: absolute;
+    content: "Note";
+    top: -10px;
+    left: 10px;
+    background: yellow;
+    padding: 2px 5px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border: 1px solid #ccc;
+    border-radius: var(--pseudo-element-border-radius, 5px);
+}
+
+.ribbon-box {
+    position: relative;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background: #e0f7fa;
+    text-align: center;
+    /* line-height: 10px; */
+    font-size: 1.2rem;
+}
+
+.ribbon-box::before {
+    position: absolute;
+    --pseudo-element-border-radius: 6px;
+    content: "SALE";
+    top: -10px;
+    right: -20px;
+    background: red;
+    color: white;
+    /* padding: 2px 2px; */
+    font-size: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: var(--pseudo-element-border-radius);
+    transform: rotate(-45deg);
+    box-shadow: 0 2px 5px rgba(I, 0, 0, 0.2);
+}
